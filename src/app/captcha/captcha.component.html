@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="captcha">
+    <div class="row">
+      <div class="col-md-8">
+        <!--<span class="captcha-text">{{captcha}}</span>-->
+        <canvas #myCanvas width="120px" height="30px" class="captcha-text" style="margin-right: 20px;"></canvas>
+      </div>
+      <div class="col-md-4">
+        <i class="fa fa-refresh cursor-pointer" aria-hidden="true" (click)="captureRefresh()"></i>
+      </div>
+    </div>
+  </div>
+  <div class="row pt-1">
+    <div class="col-md-12">
+      <input type="text" class="form-control" [attr.maxlength]="captchaSize" [(ngModel)]="captchaCode" (input)="validate()"/>
+    </div>
+    <div class="validation">
+      <span class="error-msg text-danger" *ngIf="invalidCaptcha">Invalid captcha</span>
+    </div>
+  </div>
+</div>

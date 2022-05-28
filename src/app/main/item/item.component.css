@@ -1,0 +1,8 @@
+.error-msg {
+  font-size: 10px;
+}
+input[type="text"]{
+  background-color: rgba(204, 204, 204, 0.596);
+  outline: none;
+}
+

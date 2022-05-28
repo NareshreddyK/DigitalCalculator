@@ -1,0 +1,16 @@
+.container {
+  width: 40%;
+  border: 3px solid black;
+}
+.header{
+  text-align: center;
+  margin-right : 20px;
+}
+
+.edit {
+  font-size: 13px;
+  position: absolute;
+  right: 0;
+}
+.user_details{
+}

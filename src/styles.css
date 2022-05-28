@@ -1,0 +1,133 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+@font-face {
+  font-family: "Digital";
+  src: local("Digital"), url(./assets/fonts/E1234-p7pER.ttf) format("truetype");
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Digital-Italic";
+  src: local("Digital-Italic"), url(./assets/fonts/E1234Italic-DO3md.ttf) format("truetype");
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "CaptchaMoot";
+  src: local("CaptchaMoot"), url(./assets/fonts/font5.ttf) format("truetype");
+  unicode-range: U+0061-0065;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "CaptchaMoot";
+  src: local("CaptchaMoot"), url(./assets/fonts/font3.ttf) format("truetype");
+  unicode-range: U+0066-0069;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "CaptchaMoot";
+  src: local("CaptchaMoot"), url(./assets/fonts/font27.ttf) format("truetype");
+  unicode-range: U+004A-004F, U+005A;
+  font-style: oblique;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "CaptchaMoot";
+  src: local("CaptchaMoot"), url(./assets/fonts/font32.ttf) format("truetype");
+  unicode-range: U+0050-0055;
+  font-style: oblique;
+  font-weight: bold;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "CaptchaMoot";
+  src: local("CaptchaMoot"), url(./assets/fonts/font14.ttf) format("truetype");
+  unicode-range: U+0056-0059;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "CaptchaRuff";
+  src: local("CaptchaRuff"), url(./assets/fonts/font6.ttf) format("truetype");
+  unicode-range: U+006A-006F, U+005A;
+  font-weight: bolder;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "CaptchaRuff";
+  src: local("CaptchaRuff"), url(./assets/fonts/font19.ttf) format("truetype");
+  unicode-range: U+0070-0079;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "CaptchaRuff";
+  src: local("CaptchaRuff"), url(./assets/fonts/font1.ttf) format("truetype");
+  unicode-range: U+0041-0049;
+  font-style: italic;
+  font-weight: lighter;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "CaptchaRuff";
+  src: local("CaptchaRuff"), url(./assets/fonts/font7.otf) format("truetype");
+  unicode-range: U+0030-0034;
+  font-style: oblique;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "CaptchaRuff";
+  src: local("CaptchaRuff"), url(./assets/fonts/font0.ttf) format("truetype");
+  unicode-range: U+0035-0039;
+  font-display: fallback;
+}
+
+.modal {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.modal .modal-dialog {
+  flex-grow: 1;
+}
+
+.error-msg{
+  font-size: 10px !important;
+}
+
+.validation{
+  height: 20px;
+  width: 100%;
+}
+
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label{
+  background-color: #ccc !important;
+}
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-active{
+  background-color: rgb(126, 126, 126) !important;
+}

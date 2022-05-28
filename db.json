@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "testuser",
+      "username": "testuser1",
+      "email": "testuser@example.com",
+      "password": "test@123",
+      "mobileNumber": "8838823723"
+    },
+    {
+      "id": 2,
+      "name": "test user",
+      "username": "testuser2",
+      "email": "test2user@example.com",
+      "password": "test@123",
+      "mobileNumber": "8838823724"
+    },
+    {
+      "name": "qwerty",
+      "username": "qwerty",
+      "password": "ls7j-nP4K-uls7-GeH6-bi9K-yK9O",
+      "mobileNumber": "5678907656",
+      "email": "qwert@qwer.com",
+      "id": 6
+    },
+    {
+      "name": "qwerty",
+      "username": "qsfyuy",
+      "password": "GKj9-bMR5-Cis9-GKj9-ZWJ8-ls7j-nP4K-bi9K",
+      "confirmPassword": "123456",
+      "mobileNumber": "8787897989",
+      "email": "qweb@mail.com",
+      "id": 7
+    },
+    {
+      "name": "Sample User",
+      "username": "sampleuser-2",
+      "password": "GKj9-bMR5-Cis9-GKj9-ZWJ8-ls7j-nP4K-bi9K",
+      "confirmPassword": "test@123",
+      "mobileNumber": "9866667889",
+      "email": "some@mail.com",
+      "id": 8
+    }
+  ]
+}

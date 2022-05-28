@@ -1,0 +1,14 @@
+<div [ngClass]="listType.toLowerCase() === 'expense' ? 'expense-section' : 'income-section'">
+  <h4 class="text-uppercase" [ngClass]="listType.toLowerCase() === 'expense' ? 'text-danger' : 'text-success'">{{listType}}</h4>
+  <ul class="list-group">
+    <li [ngClass]="listType.toLowerCase() === 'expense' ? 'text-danger' : 'text-success'" *ngFor="let item of dataList">
+      <div class="item">
+        <span class="item-name">{{item.description}}</span>
+        <span class="amount">{{item.amount}}</span>
+        <span class="delete" (click)="this.deleteItem.emit(item);">
+          <i class="fa fa-trash text-muted" aria-hidden="true"></i>
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>

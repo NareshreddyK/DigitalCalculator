@@ -1,0 +1,108 @@
+<div class="container">
+  <form [formGroup]="registerForm">
+    <div class="row">
+      <div class="col-md-12 border border-secondary pt-3">
+        <div class="form-group row">
+          <div class="col-md-3">
+            <label for="Name">Name</label>
+          </div>
+          <div class="col-md-9">
+            <input type="text" formControlName="name" class="form-control" placeholder="Name" />
+            <div class="validation">
+              <span class="text-danger" *ngIf="f.name.errors && f.name.dirty">
+                <span class="error-msg" *ngIf="f.name.errors.required">Please Enter Name</span>
+                <span class="error-msg" *ngIf="f.name.errors.pattern">Please Enter Valid Name</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-3">
+            <label for="username">User Name</label>
+          </div>
+          <div class="col-md-9">
+            <input type="text" formControlName="username" class="form-control" placeholder="Username" />
+            <div class="validation">
+              <span class="text-danger" *ngIf="f.username.errors && f.username.dirty; else validationPassed">
+                <span class="error-msg" *ngIf="f.username.errors.required">Please Enter UserName</span>
+                <span class="error-msg" *ngIf="f.username.errors.pattern">Please Enter Valid UserName</span>
+              </span>
+              <ng-template #validationPassed>
+                <span class="text-danger" *ngIf="f.username.touched && f.username.value">
+                  <span class="error-msg" *ngIf="!isUsernameUnique(f.username.value)">UserName already exists</span>
+                </span>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-3">
+            <label for="password">Password</label>
+          </div>
+          <div class="col-md-9">
+            <input type="password" formControlName="password" class="form-control" placeholder="Password" />
+            <div class="validation">
+              <span class=" text-danger" *ngIf="f.password.errors && f.password.dirty">
+                <span class="error-msg" *ngIf="f.password.errors.required">Please Enter Password</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-3">
+            <label for="confirm_password">Confirm Password</label>
+          </div>
+          <div class="col-md-9">
+            <input type="password" formControlName="confirmPassword" class="form-control"
+              placeholder="Confirm Password" />
+            <div class="validation">
+              <span class=" text-danger" *ngIf="f.confirmPassword.errors && f.confirmPassword.dirty">
+                <span class="error-msg" *ngIf="f.confirmPassword.errors.required">Please Enter Confirm Password</span>
+                <span class="error-msg" *ngIf="f.confirmPassword.errors.confirmedValidator">Password And Confirm
+                  Password
+                  Not Matched</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-3">
+            <label for="mobile_number">Mobile Number</label>
+          </div>
+          <div class="col-md-9">
+            <input type="phone" formControlName="mobileNumber" class="form-control" placeholder="Mobile Number"
+              (keypress)="isNumber($event)" />
+            <div class="validation">
+              <span class="text-danger" *ngIf="f.mobileNumber.errors && f.mobileNumber.dirty">
+                <span class="error-msg" *ngIf="f.mobileNumber.errors.required">Please Enter Mobile Number</span>
+                <span class="error-msg" *ngIf="f.mobileNumber.errors.pattern">Please Enter Valid Mobile Number</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-3">
+            <label for="emailId">E-mail Id</label>
+          </div>
+          <div class="col-md-9">
+            <input type="email" formControlName="email" class="form-control" placeholder="Email Address" />
+            <div class="validation">
+              <span class="text-danger" *ngIf="f.email.errors && f.email.dirty; else validationPassed">
+                <span class="error-msg" *ngIf="f.email.errors.required">Please Enter Email</span>
+                <span class="error-msg" *ngIf="f.email.errors.pattern">Please Enter Valid Email Id</span>
+              </span>
+              <ng-template #validationPassed>
+                <span class="text-danger" *ngIf="f.email.touched && f.email.value">
+                  <span class="error-msg" *ngIf="!isEmailUnique(f.email.value)">Email already exists</span>
+                </span>
+              </ng-template>
+            </div>
+          </div>
+        </div>
+        <div class="form-group text-center">
+          <button class="btn width80per" [ngClass]="registerForm.valid ? 'btn-primary' : 'btn-secondary'" (click)="save()">Register</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

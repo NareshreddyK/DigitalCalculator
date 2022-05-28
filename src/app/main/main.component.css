@@ -1,0 +1,14 @@
+.container{
+  width: 60%;
+}
+.header-content{
+  width: 100%;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+.header-content h1{
+  padding-top: 0;
+  padding-bottom: 20px;
+  color: rgb(211, 98, 45);
+}

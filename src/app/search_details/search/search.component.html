@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <!-- Search form -->
+    <div class="col-md-4">
+      <div class="form-group">
+        <select name="searchType" id="search-type" class="form-control" [(ngModel)]="searchType">
+          <option value="name">First Name</option>
+          <option value="last">Last Name</option>
+          <option value="age">Age</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <input class="form-control" type="text" [(ngModel)]="searchName" placeholder="Search"
+        aria-label="Search" />
+      </div>
+    </div>
+    <div class="col-md-4">
+      <b>Order By : </b>
+      <i class="fa fa-sort-alpha-desc" aria-hidden="true" *ngIf="orderBy === 'desc'" (click)="orderBy = 'asc'"></i>
+      <i class="fa fa-sort-alpha-asc" aria-hidden="true" *ngIf="orderBy === 'asc'" (click)="orderBy = 'desc'"></i>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users | filter:searchType:searchName | sort:orderBy:'age'; odd as isOdd;" [rowColor]="isOdd">
+            <td>{{user.name}}</td>
+            <td>{{user.last}}</td>
+            <td>{{user.age}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

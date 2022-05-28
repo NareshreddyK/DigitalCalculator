@@ -1,0 +1,64 @@
+.demo-table {
+  width: 100%;
+}
+
+/* .mat-column-demo-position {
+  width: 32px;
+  border-right: 1px solid currentColor;
+  padding-right: 24px;
+  text-align: center;
+}
+
+.mat-column-demo-name {
+  padding-left: 16px;
+  font-size: 20px;
+}
+
+.mat-column-demo-weight {
+  font-style: italic;
+}
+
+.mat-column-demo-symbol {
+  width: 32px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mat-row .mat-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-row:hover .mat-cell {
+  border-color: currentColor;
+}
+
+.demo-row-is-clicked {
+  font-weight: bold;
+} */
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar.mat-primary {
+  background: #000 !important;
+  color: #fff;
+}
+
+.example-icon{
+  color: #fff !important;
+}
+
+.example-icon:hover {
+  cursor: pointer;
+}
+
+.full-width{
+  width: 100px;
+}

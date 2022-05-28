@@ -1,0 +1,111 @@
+<div class="container">
+    <p class="header">
+      User Details
+    </p>
+
+  <div class="form-group">
+    <form [formGroup]="userDetails">
+      <div class="row mt-4 mb-4">
+        <div class="col-md-6">
+          First Name
+        </div>
+        <div class="col-md-6 position-relative" *ngIf="!validations['firstName']; else editFirstname">
+            <span class="user_details">{{f.firstName.value}}</span>
+          <mat-icon aria-hidden="false" class="edit" aria-label="Edit" (click)="edit('firstName')">edit
+          </mat-icon>
+        </div>
+        <ng-template #editFirstname>
+          <div class="col-md-6">
+            <mat-form-field appearance="fill" class="example-fullwidth">
+              <input matInput formControlName="firstName" (blur)="validate('firstName',true)" (input)='validate()'>
+              <mat-error *ngIf="f.firstName.invalid">Enter First Name</mat-error>
+            </mat-form-field>
+          </div>
+        </ng-template>
+      </div>
+
+      <div class="row mt-4 mb-4">
+        <div class="col-md-6">
+          Last Name
+        </div>
+        <div class="col-md-6 position-relative" *ngIf="!validations['lastName']; else editLastname">
+          <span class="user_details">{{f.lastName.value}}</span>
+          <mat-icon aria-hidden="false" class="edit" aria-label="Edit" (click)="edit('lastName')">edit
+          </mat-icon>
+        </div>
+        <ng-template #editLastname>
+          <div class="col-md-6">
+            <mat-form-field appearance="fill" class="example-fullwidth">
+              <input matInput formControlName="lastName" (blur)="validate('lastName',true)" (input)='validate()'>
+              <mat-error *ngIf="f.lastName.invalid">Enter Last Name</mat-error>
+            </mat-form-field>
+          </div>
+        </ng-template>
+      </div>
+
+      <div class="row mt-4 mb-4">
+        <div class="col-md-6">
+          Gender
+        </div>
+        <div class="col-md-6 position-relative" *ngIf="!validations['gender']; else editGender">
+          <span class="user_details">{{ f.gender.value }}</span>
+          <mat-icon aria-hidden="false" class="edit" aria-label="Edit" (click)="edit('gender')">edit</mat-icon>
+        </div>
+        <ng-template #editGender>
+          <div class="col-md-6">
+            <mat-form-field appearance="fill" class="example-fullwidth">
+              <mat-select formControlName="gender" (selectionChange)="validate('gender',true)" [value]="userData.gender">
+                <mat-option value="male">Male</mat-option>
+                <mat-option value="female">Female</mat-option>
+              </mat-select>
+              <mat-error *ngIf="f.gender.invalid">Enter Gender</mat-error>
+            </mat-form-field>
+          </div>
+        </ng-template>
+      </div>
+
+      <div class="row mt-4 mb-4">
+        <div class="col-md-6">
+          Phone Number
+        </div>
+        <div class="col-md-6 position-relative" *ngIf="!validations['phoneNumber']; else editPhoneNumber">
+          <span class="user_details">{{f.phoneNumber.value}}</span>
+          <mat-icon aria-hidden="false" class="edit" aria-label="Edit" (click)="edit('phoneNumber')">edit
+          </mat-icon>
+        </div>
+        <ng-template #editPhoneNumber>
+          <div class="col-md-6">
+            <mat-form-field appearance="fill" class="example-fullwidth">
+              <input matInput type="number" formControlName="phoneNumber" (blur)="validate('phoneNumber',true)" (input)='validate()'>
+              <mat-error *ngIf="f.phoneNumber.invalid">Enter Phone Number</mat-error>
+            </mat-form-field>
+          </div>
+        </ng-template>
+      </div>
+
+      <div class="row mt-4 mb-4">
+        <div class="col-md-6">
+          Address
+        </div>
+        <div class="col-md-6 position-relative" *ngIf="!validations['address']; else editAddress">
+          <span class="user_details">{{f.address.value}}</span>
+          <mat-icon aria-hidden="false" class="edit" aria-label="Edit" (click)="edit('address')">edit</mat-icon>
+        </div>
+        <ng-template #editAddress>
+          <div class="col-md-6">
+            <mat-form-field appearance="fill" class="example-fullwidth">
+              <textarea matInput formControlName="address" (blur)="validate('address',true)" (input)='validate()'></textarea>
+              <mat-error *ngIf="f.address.invalid">Enter Address</mat-error>
+            </mat-form-field>
+          </div>
+        </ng-template>
+      </div>
+
+      <div class="row mt-4 mb-4">
+        <div class="col-md-12 text-center">
+          <button mat-button class="btn btn-secondary" (click)="Save()" [disabled]="!enableSave">Save</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

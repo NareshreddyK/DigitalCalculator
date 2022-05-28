@@ -1,0 +1,25 @@
+.example-fullwidth{
+  width: 100%;
+}
+
+.header{
+  position: relative;
+}
+
+.width100per{
+  width: 100%;
+}
+
+.example-icon-close{
+  position: absolute;
+  top:5px;
+  right:5px;
+}
+
+.example-icon-close:hover {
+  cursor: pointer;
+}
+
+.list-inline{
+  text-align: right;
+}

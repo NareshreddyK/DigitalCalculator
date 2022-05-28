@@ -1,0 +1,139 @@
+.CalMain {
+  width: 320px;
+  margin: 0 auto;
+  border: 1px solid #bfced5;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+  .CalMain .lt {
+    position: absolute;
+    width: 24px;
+    background-color: #e5e5e5;
+    height: 40px;
+    left: -37px;
+    top: -30px;
+    transform: skewX(-305deg);
+  }
+
+  .CalMain .lm {
+    position: absolute;
+    width: 15px;
+    background-color: #e5e5e5;
+    left: 0;
+    height: calc(100% - 20px);
+    top: 10px;
+  }
+
+  .CalMain .lb {
+    position: absolute;
+    width: 24px;
+    background-color: #e5e5e5;
+    height: 40px;
+    left: -37px;
+    bottom: -30px;
+    transform: skewX(305deg);
+  }
+
+  .CalMain .rt {
+    position: absolute;
+    width: 24px;
+    background-color: #6f8d9b;
+    height: 40px;
+    right: -37px;
+    top: -30px;
+    transform: skewX(305deg);
+  }
+
+  .CalMain .rm {
+    position: absolute;
+    width: 15px;
+    background-color: #6f8d9b;
+    right: 0;
+    height: calc(100% - 20px);
+    top: 10px;
+  }
+
+  .CalMain .rb {
+    position: absolute;
+    width: 24px;
+    background-color: #6f8d9b;
+    height: 40px;
+    right: -37px;
+    bottom: -30px;
+    transform: skewX(-305deg);
+  }
+
+  .CalMain .bb {
+    position: absolute;
+    height: 11px;
+    width: 100%;
+    background-color: #f1f1f1;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .CalMain .CalC {
+    border: 1px solid #d3caca;
+    border-radius: 15px;
+    padding: 20px;
+  }
+
+    .CalMain .CalC .CalInput input {
+      background-color: #3c4d54;
+      border-radius: 10px;
+      border: 0px;
+      padding: 0px 6px 2px;
+      width: 100%;
+      color: #fff;
+      text-align: right;
+      font-size: 25px;
+      caret-color: transparent;
+    }
+
+      .CalMain .CalC .CalInput input:focus, .CalMain .CalC .CalInput input:focus-visible {
+        border: 0px;
+      }
+
+    .CalMain .CalC .btnRow {
+      margin-top: 10px;
+    }
+
+      .CalMain .CalC .btnRow .col-md-3, .CalMain .CalC .btnRow .col-md-4 {
+        margin: 8px 0px;
+      }
+
+        .CalMain .CalC .btnRow .col-md-3 .calbtn, .CalMain .CalC .btnRow .col-md-4 .calbtn {
+          width: 100%;
+          border-radius: 5px;
+          background-color: grey;
+          border: 0px solid #d7d7d7;
+          background: linear-gradient(to bottom, #ecf0f3 0%, #596a72 100%);
+          padding: 2px 0 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #000;
+          text-shadow: -1px -1px #fff 73;
+          font-size: 20px;
+          line-height: 100%;
+        }
+
+          .CalMain .CalC .btnRow .col-md-3 .calbtn span, .CalMain .CalC .btnRow .col-md-4 .calbtn span {
+            display: inline;
+          }
+
+          .CalMain .CalC .btnRow .col-md-3 .calbtn:hover, .CalMain .CalC .btnRow .col-md-4 .calbtn:hover {
+            background: linear-gradient(to bottom, #b0bcc5 0%, #596a72 100%);
+          }
+
+          .CalMain .CalC .btnRow .col-md-3 .calbtn.fullH, .CalMain .CalC .btnRow .col-md-4 .calbtn.fullH {
+            height: 100%;
+          }
+
+        .CalMain .CalC .btnRow .col-md-3 .calbtn {
+          font-size: 23px;
+          padding: 0px 0px 4px;
+        }

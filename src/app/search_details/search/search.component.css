@@ -1,0 +1,12 @@
+.even {
+    background-color: wheat;
+  }
+
+  .odd {
+    background-color: darkcyan;
+    color: white;
+  }
+
+  .fa{
+    cursor: pointer;
+  }

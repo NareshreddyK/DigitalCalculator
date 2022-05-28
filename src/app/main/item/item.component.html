@@ -1,0 +1,26 @@
+<form [formGroup]="ieform">
+  <div class="row">
+    <div class="col-md-3">
+      <input type="text" class="form-control" formControlName="amount" placeholder="Amount" (keypress)="isNumber($event)">
+      <span class="text-danger" *ngIf="this.ieform.get('amount').errors && this.ieform.get('amount').dirty">
+        <span class="error-msg" *ngIf="this.ieform.get('amount').errors.required">Please enter an amount</span>
+        <span class="error-msg" *ngIf="this.ieform.get('amount').errors.pattern">Please enter valid amount</span>
+      </span>
+    </div>
+    <div class="col-md-8">
+      <input type="text" class="form-control" formControlName="description" placeholder="Description">
+      <span class="text-danger" *ngIf="this.ieform.get('description').errors && this.ieform.get('description').dirty">
+        <span class="error-msg" *ngIf="this.ieform.get('description').errors.required">Please enter an description</span>
+        <span class="error-msg" *ngIf="this.ieform.get('description').errors.minlength">Description should atleast have 3 chars</span>
+        <span class="error-msg" *ngIf="this.ieform.get('description').errors.maxlength">Description can not exeed 50 chars</span>
+        <span class="error-msg" *ngIf="this.ieform.get('description').errors.pattern && !this.ieform.get('description').errors.maxlength && !this.ieform.get('description').errors.minlength">Please enter valid description</span>
+      </span>
+    </div>
+    <div class="col-md-1">
+      <button class="btn" [ngClass]="this.ieform.valid ? 'btn-primary' : 'btn-secondary'" (click)="Add()">Add</button>
+      <div>
+        <br/>
+      </div>
+    </div>
+  </div>
+</form>

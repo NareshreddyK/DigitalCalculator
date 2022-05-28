@@ -1,0 +1,51 @@
+.list-group{list-style: none;}
+.list-group li:not(:last-child) {
+  margin-bottom: 5px;
+}
+.item{
+  background-color: #e5e1e1b5;
+  position: relative;
+  padding: 15px;
+}
+.item:hover .amount{
+  right: 50px;
+}
+.item:hover .delete{
+  display: inline-block;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.13);
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+}
+.amount {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 5px;
+}
+.text-success{
+  color: #24a16d !important;
+}
+span.item-name {
+  width: 70%;
+  text-transform: lowercase;
+  word-wrap: break-word;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+span.item-name:first-letter {
+  text-transform: uppercase;
+}
+.income-section .amount {
+  background-color: #87bb87;
+}
+.expense-section .amount {
+  background-color: #f1cccc;
+}
+.delete{
+  display: none;
+}

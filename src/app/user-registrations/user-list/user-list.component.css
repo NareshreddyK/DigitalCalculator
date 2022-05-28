@@ -1,0 +1,6 @@
+.list-inline li{
+  padding: 0 5px;
+}
+.table thead tr{
+  background-color: rgb(203, 224, 236);
+}

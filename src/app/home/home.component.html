@@ -1,0 +1,45 @@
+<div class=" container">
+  Calculate now
+</div>
+<div class="CalMain">
+  <div>{{subDisplayText}}</div>
+  <div class="lt"></div>
+  <div class="lm"></div>
+  <div class="lb"></div>
+  <div class="rt"></div>
+  <div class="rm"></div>
+  <div class="rb"></div>
+  <div class="CalC">
+    <div class="CalInput">
+      <input type="text" [(ngModel)]="textBoxValue" maxlength="9" id="idText" #idText (keypress)="isNumber($event)" (focus)="PosEnd(idText)" (click)="PosEnd(idText)" (input)="PosEnd(idText)" />
+    </div>
+    <div class="btnRow">
+      <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-3"><button class="calbtn" (click)="onClick('+',true)"><span>&#43;</span></button></div>
+        <div class="col-md-3 col-sm-3 col-xs-3"><button class="calbtn" (click)="onClick('-',true)"><span>&#8722;</span></button></div>
+        <div class="col-md-3 col-sm-3 col-xs-3"><button class="calbtn" (click)="onClick('x',true)"><span>&#215;</span></button></div>
+        <div class="col-md-3 col-sm-3 col-xs-3"><button class="calbtn" (click)="onClick('/',true)"><span>&#247;</span></button></div>
+        <div class="col-md-9 col-sm-9 col-xs-9">
+          <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-4"><button class="calbtn" (click)="onClick('7')"><span>7</span></button></div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><button class="calbtn" (click)="onClick('8')"><span>8</span></button></div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><button class="calbtn" (click)="onClick('9')"><span>9</span></button></div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><button class="calbtn" (click)="onClick('4')"><span>4</span></button></div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><button class="calbtn" (click)="onClick('5')"><span>5</span></button></div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><button class="calbtn" (click)="onClick('6')"><span>6</span></button></div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><button class="calbtn" (click)="onClick('1')"><span>1</span></button></div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><button class="calbtn" (click)="onClick('2')"><span>2</span></button></div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><button class="calbtn" (click)="onClick('3')"><span>3</span></button></div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><button class="calbtn" (click)="onClick('0')"><span>0</span></button></div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><button class="calbtn" (click)="onClick('.')"><span>.</span></button></div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><button class="calbtn" (click)="onClick('AC',true)"><span>AC</span></button></div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3 ">
+          <button class="calbtn fullH" (click)="onClick('=',true)"><span>&#61;</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bb"></div>
+</div>

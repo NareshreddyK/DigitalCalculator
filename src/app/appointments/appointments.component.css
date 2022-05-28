@@ -1,0 +1,22 @@
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label{
+  background-color: #ccc !important;
+  color: rgb(31, 30, 30) !important;
+}
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active{
+  background-color: rgb(166 171 168) !important;
+}
+
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label .mat-tab-label-content{
+  color: rgb(6, 6, 6) !important;
+}
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar{
+  background-color: transparent;
+}
+::ng-deep.mat-tab-label, ::ng-deep.mat-tab-label-active{
+  min-width: 0 !important;
+  padding: 10px !important;
+  margin: 0px !important;
+ }
+ ::ng-deep .mat-tab-list{
+   border-radius: 10px;
+ }
